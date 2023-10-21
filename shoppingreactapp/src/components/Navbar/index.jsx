@@ -58,44 +58,6 @@ const MenuItem = styled.div`
 `;
 
 const Navbar = () => {
-  // return(
-
-  //   <div className="containerNavbar">
-  //     <div className="WrapperNavbar">
-  //         <div className="LeftNavbar">
-  //             <span className="LeftNavbarText">EN</span>
-  //             <div className="LeftNavbarSearchContainer">
-  //                 <input className="RightNavbarInput" type="text" placeholder="Search..."/>
-  //                 <FaSistrix />
-
-  //             </div>
-  //         </div>
-  //         <div className="CenterNavbar">
-  //             <h1 className="CenterNavbarLogo">Rehimli</h1>
-
-  //         </div>
-  //         <div className="RightNavbar">
-  //             <span className="rightNavbarRegister">Register</span>
-  //             <span className="rightNavbarSignin">Signin</span>
-  //             <div className="RightNavbarIcons">
-
-  //             {/* <Badge color="secondary" badgeContent={4}>
-  //               <BsCart3 />
-  //             </Badge>
-  //             <Badge color="secondary" badgeContent={100}>
-  //               <MailIcon />
-  //             </Badge>
-  //             <Badge color="secondary" badgeContent={1000} max={999}>
-  //               <MailIcon />
-  //             </Badge> */}
-  //             </div>
-
-  //         </div>
-  //     </div>
-  //   </div>
-
-  // );
-
   return (
     <Container>
       <Wrapper>
