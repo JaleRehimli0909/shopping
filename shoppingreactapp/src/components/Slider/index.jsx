@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
-
 import { sliderItems } from "../../Pages/data";
+import { mobile } from "../../Responsive";
 
 const Container = styled.div`
   width: 100%;
@@ -11,6 +11,8 @@ const Container = styled.div`
   backgroun-color: red;
   position: relative;
   overflow: hidden;
+ ${mobile({display: 'none'})};
+
 `;
 
 const Arrow = styled.div`

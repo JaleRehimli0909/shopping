@@ -5,10 +5,12 @@ import Announcement from "../../components/Announcement";
 import Footer from "../../components/Footer";
 
 import { IoIosAddCircle, IoMdRemoveCircle } from "react-icons/io";
+import { mobile } from "../../Responsive";
 
 const Container = styled.div``;
 const Wrapper = styled.div`
   padding: 20px;
+  ${mobile({ padding: "10px" })};
 `;
 const Title = styled.h1`
   font-weight: 300;
@@ -29,7 +31,9 @@ const TopBottom = styled.button`
     props.type === "filled" ? "black" : "transparent"};
   color: ${(props) => props.type === "filled" && "white"};
 `;
-const TopTexts = styled.div``;
+const TopTexts = styled.div`
+  ${mobile({ display: "none" })};
+`;
 const TopText = styled.span`
   text-decoration: underline;
   cursor: pointer;
@@ -39,6 +43,7 @@ const TopText = styled.span`
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
+  ${mobile({ fleXDirection: "column" })};
 `;
 const Info = styled.div`
   flex: 3;
@@ -47,6 +52,7 @@ const Info = styled.div`
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
+  ${mobile({ fleXDirection: "column" })};
 `;
 const ProductDetail = styled.div`
   flex: 2;
@@ -85,10 +91,12 @@ const ProductAmountContainer = styled.div`
 const ProductAmont = styled.div`
   font-size: 24px;
   margin: 5px;
+  ${mobile({ margin: "5px 15px" })};
 `;
 const ProductPrice = styled.div`
   font-size: 30px;
   font-weight: 200;
+  ${mobile({ marginBottom: "20px" })};
 `;
 const Sumary = styled.div`
   flex: 1;
@@ -98,31 +106,23 @@ const Sumary = styled.div`
   height: 52vh;
 `;
 const SumaryTitle = styled.h1`
-font-weight: 200;
-
+  font-weight: 200;
 `;
 const SumaryItem = styled.div`
-margin: 30px 0px;
-display:flex;
-justify-content: space-between;
-font-weight: ${props=> props.type === 'total' && '500'};
-font-size: ${props=> props.type === 'total' && '24px'};
-
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: ${(props) => props.type === "total" && "500"};
+  font-size: ${(props) => props.type === "total" && "24px"};
 `;
-const SumaryItemText = styled.span`
- 
-`;
-const SumaryItemPrice = styled.span`
-
-`;
+const SumaryItemText = styled.span``;
+const SumaryItemPrice = styled.span``;
 const Button = styled.button`
-   width:100%;
-   padding: 10px;
-   background-color: black;
-   color: white;
-   font-weight: 600;
-
-
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
 `;
 
 const Hr = styled.hr`
@@ -214,7 +214,7 @@ const Cart = () => {
               <SumaryItemText>Shipping Discount</SumaryItemText>
               <SumaryItemPrice>$ -5.90</SumaryItemPrice>
             </SumaryItem>
-            <SumaryItem  type='total'>
+            <SumaryItem type="total">
               <SumaryItemText>Total</SumaryItemText>
               <SumaryItemPrice>$ 80</SumaryItemPrice>
             </SumaryItem>
